@@ -1,6 +1,6 @@
 package ru.job4j.chess.firuges;
 
-public enum Cell {
+public enum Cell { // этот класс описывает все клетки на шахматной доске.
     A1(0, 7), A2(0, 6), A3(0, 5), A4(0, 4), A5(0, 3), A6(0, 2), A7(0, 1), A8(0, 0),
     B1(1, 7), B2(1, 6), B3(1, 5), B4(1, 4), B5(1, 3), B6(1, 2), B7(1, 1), B8(1, 0),
     C1(2, 7), C2(2, 6), C3(2, 5), C4(2, 4), C5(2, 3), C6(2, 2), C7(2, 1), C8(2, 0),
@@ -26,7 +26,7 @@ public enum Cell {
         return y;
     }
 
-    public static Cell findBy(int x, int y) {
+    public static Cell findBy(int x, int y) { //чтобы получить нужный объект из перечисления мы используем статический метод.
         Cell rsl = null;
         for (Cell cell : values()) {
             if (cell.x == x && cell.y == y) {
